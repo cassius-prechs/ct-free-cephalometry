@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.task
+models/
+data-200_pca/
+eval-40_pca/
