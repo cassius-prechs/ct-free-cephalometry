@@ -68,6 +68,15 @@
                   <span>Paper (Coming Soon)</span>
                 </a>
               </span>
+              <!-- arXiv Link: fill in once posted. -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
               <!-- Supplementary Link: fill in once it is public. -->
               <span class="link-block">
                 <a class="external-link button is-normal is-rounded is-dark" disabled>
@@ -86,6 +95,15 @@
                   <span>Code</span>
                 </a>
               </span>
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-quote-right"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -97,7 +115,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/pipeline.png" alt="Pipeline overview">
+      <video id="teaser" autoplay muted loop playsinline>
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
         Estimating 24 cephalometric landmarks from only 400 sparse MediaPipe
         Face Landmarker points &mdash; no CT scan of the patient required at
