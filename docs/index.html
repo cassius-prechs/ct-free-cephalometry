@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Toward CT-Free 3D Cephalometric Landmark Estimation Using MediaPipe Face Landmarker.">
+  <meta name="keywords" content="Cephalometric landmark, 3D face analysis, MediaPipe, CT-free">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toward CT-Free 3D Cephalometric Landmark Estimation Using MediaPipe Face Landmarker</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Toward CT-Free 3D Cephalometric Landmark
+            Estimation Using MediaPipe Face Landmarker</h1>
+          <!-- TODO: fill in the venue once it can be publicly stated, e.g. "ECCV 2026 Workshop, Milan, Italy" -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Kazuki Saita<sup>1</sup>
+              <a href="https://orcid.org/0009-0002-7280-5695" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>,</span>
+            <span class="author-block">Tomoki Abe<sup>1</sup>
+              <a href="https://orcid.org/0009-0005-5368-851X" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>,</span>
+            <span class="author-block">Mao Noda<sup>2</sup>
+              <a href="https://orcid.org/0009-0004-6830-6302" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>,</span>
+            <span class="author-block">Chie Tachiki<sup>2</sup>
+              <a href="https://orcid.org/0000-0003-0614-9159" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>,</span>
+            <span class="author-block">Yasushi Nishii<sup>2</sup>
+              <a href="https://orcid.org/0000-0001-7695-1564" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>,</span>
+            <span class="author-block">Hideo Saito<sup>1</sup>
+              <a href="https://orcid.org/0000-0002-2421-9862" class="author-orcid" title="ORCID"><i class="ai ai-orcid"></i></a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Keio University, Yokohama, Japan,</span>
+            <span class="author-block"><sup>2</sup>Tokyo Dental College, Tokyo, Japan</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link: fill in once the venue page / PDF is public. -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Supplementary Link: fill in once it is public. -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                  </span>
+                  <span>Supplementary (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link: fill in once the repository is public. -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/pipeline.png" alt="Pipeline overview">
+      <h2 class="subtitle has-text-centered">
+        Estimating 24 cephalometric landmarks from only 400 sparse MediaPipe
+        Face Landmarker points &mdash; no CT scan of the patient required at
+        inference time.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In orthodontic diagnosis, 3D cephalometric analysis from CT provides
+            more reliable measurements than 2D radiography, but the associated
+            radiation exposure limits repeated imaging of growing patients.
+            We propose a pipeline that estimates 24 cephalometric landmarks
+            from only 400 sparse 3D facial points produced by MediaPipe Face
+            Landmarker, without requiring a CT scan of the patient at inference
+            time, combining cross-attention coarse-to-fine estimation, a
+            statistical shape prior, and a complementary Ridge regression
+            ensemble. Because paired real-photograph/CT data at this scale are
+            unavailable, our main evaluation uses MediaPipe landmarks extracted
+            from CT-derived STL renders; on 40 held-out cases from a 240-case
+            jaw-deformity cohort, the pipeline outperforms PointNet and MLP
+            baselines on every metric (4.36&nbsp;mm MRE) and reaches an ANB angle
+            error of 1.71&deg; with 77.5% skeletal classification
+            accuracy&mdash;a gap to a CT-based reference far smaller in clinical
+            classification than in positional accuracy, indicating much of the
+            clinically decisive information survives the removal of CT. A pilot
+            study on real clinical photographs, however, reveals a substantially
+            larger sim-to-real domain gap, indicating that transfer to real
+            photographs remains an open problem before clinical deployment.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Code &amp; Data</h2>
+        <div class="content">
+          <p>
+            The paper and code are being prepared for release. This page will
+            be updated with links as they become available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>The BibTeX entry will be added once the proceedings are published.</p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website's source template is licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>,
+            borrowed from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies
+            project page</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
