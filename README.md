@@ -58,4 +58,11 @@ BibTeX will be added after publication.
 
 ## License
 
-TBD.
+Code in this repository is released under the [MIT License](LICENSE).
+The project page (`docs/`) is adapted from the Nerfies project page
+template and remains under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/),
+as noted in its footer.
+
+Trained model checkpoints and the underlying clinical dataset are
+**not** included and are not covered by this license, as they are
+derived from a private patient dataset.
