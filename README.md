@@ -14,6 +14,13 @@ Estimate **24 cephalometric landmarks**, standard cephalometric angles, and skel
 
 `RGB image → MediaPipe Face Landmarker → 400 landmarks → normalization → landmark estimation → SSM correction → metric coordinates`
 
+<img src="docs/static/images/pipeline.png" alt="Pipeline overview: Stage0 coarse estimation and Ridge ensemble prediction branches, refined in Stage1, combined and corrected via SSM-based correction." width="900">
+
+Landmark estimation runs two complementary branches — a cross-attention
+neural network (Stage0 coarse → Stage1 refinement, both ensembled) and
+a PCA-based Ridge regression ensemble — whose predictions are blended
+and passed through SSM-based outlier correction.
+
 ## Repository
 
 | File                     | Description                                |
